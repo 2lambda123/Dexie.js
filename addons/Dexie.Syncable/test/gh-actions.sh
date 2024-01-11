@@ -1,7 +1,8 @@
-#!/bin/bash -e
+echo "Running dexie-syncable tests"
+pnpm run test:syncable#!/bin/bash -e
 cd ../../Dexie.Observable
 echo "Installing dependencies for dexie-observable"
-pnpm install >/dev/null
+pnpm install --reporter silent
 echo "Building dexie-observable"
 pnpm run build
 cd -
