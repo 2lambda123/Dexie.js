@@ -18,7 +18,7 @@ jobs:
         TF:
           - test
           - addons/Dexie.Observable/test
-          - addons/Dexie.Syncable/test
+          - test/syncable
           - addons/dexie-export-import/test
           - libs/dexie-react-hooks/test
       fail-fast: true # If one test fails, abort the rest of the tests
@@ -43,4 +43,4 @@ jobs:
         uses: coactions/setup-xvfb@v1
         with:
           run: bash ./gh-actions.sh
-          working-directory: ${{ matrix.TF }}
+          workdir: ${{ matrix.TF }}
