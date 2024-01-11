@@ -1,6 +1,6 @@
 ﻿/*  WebSocketSyncProtocol
 
-    An implementation of ISyncProtocol that use a WebSocket to interact with a remote server and syncronize continously and immediately when
+    An implementation of ISyncProtocol that uses a WebSocket to interact with a remote server and syncronize continously and immediately when
     any change occur on any side.
 
     This sample is compatible with the corresponing WebSocketSyncServer.js - a node.js server that syncs with RAM memory only, but does it in a waterproof
@@ -88,7 +88,7 @@
             // will not run until we have called onSuccess(). This is because we want application code to get results that are as
             // accurate as possible. Specifically when connected the first time and the entire DB is being synced down to the browser,
             // it is important that queries starts running first when db is in sync.
-            var isFirstRound = true;
+            var isFirstRound = isFirstRound || !syncedRevision;
             // When message arrive from the server, deal with the message accordingly:
             ws.onmessage = function (event) {
                 try {
