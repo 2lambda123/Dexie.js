@@ -136,7 +136,7 @@ importers:
     dependencies:
       dexie:
         specifier: ^4.0.1-alpha.5
-        version: link:../..
+        version: 4.0.1-beta.6
       dexie-cloud-common:
         specifier: ^1.0.31
         version: link:../../libs/dexie-cloud-common
@@ -264,7 +264,7 @@ importers:
         version: 17.0.17
       dexie:
         specifier: ^3.2 || ^4.0.1-alpha
-        version: link:../..
+        version: 4.0.1-beta.6
       just-build:
         specifier: ^0.9.24
         version: 0.9.24
@@ -348,10 +348,10 @@ importers:
         version: 5.3.0(@popperjs/core@2.11.8)
       dexie:
         specifier: ^4.0.1-alpha.27
-        version: link:../..
+        version: 4.0.1-beta.6
       dexie-cloud-addon:
         specifier: ^4.0.1-beta.48
-        version: link:../../addons/dexie-cloud
+        version: 4.0.1-beta.55(dexie@4.0.1-beta.6)
       dexie-react-hooks:
         specifier: ^1.1.6
         version: link:../../libs/dexie-react-hooks
@@ -4285,7 +4285,7 @@ packages:
   /axios@0.26.1:
     resolution: {integrity: sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==}
     dependencies:
-      follow-redirects: 1.15.2
+      follow-redirects: 1.15.4
     transitivePeerDependencies:
       - debug
     dev: true
@@ -5572,6 +5572,24 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: false
+
+  /dexie-cloud-addon@4.0.1-beta.55(dexie@4.0.1-beta.6):
+    resolution: {integrity: sha512-umH5us+WfvcxU3WxOFtSr5WMo/wietzrmUa0SdsHqYNfHsn/5+QjHngwwMZ97HIVVT0MkBnurxpxUAEMychXqQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      dexie: ^4.0.1-alpha.5
+    dependencies:
+      dexie: 4.0.1-beta.6
+      dexie-cloud-common: 1.0.31
+      rxjs: 7.5.6
+    dev: false
+
+  /dexie-cloud-common@1.0.31:
+    resolution: {integrity: sha512-94Ag7YPcr3qkpljIQAU9xJq202SUQ7R2L6fg+tw7CZqRDCw+igz2mDppQEseimjPHHuaHpIKcQMYt/SQiohQJg==}
+    dev: false
+
+  /dexie@4.0.1-beta.6:
+    resolution: {integrity: sha512-NOexH4Rn8mrdSg/bn3YNFdPzQ1vPNxgPYLGWGU46z26NYGW1XmC0hhjjttwx9jYwba1K9Ypo1ZbZLNKtK6INSg==}
 
   /di@0.0.1:
     resolution: {integrity: sha512-uJaamHkagcZtHPqCIHZxnFrXlunQXgBOsZSUOWwFw31QJCAbyTBoHMW75YOTur5ZNx8pIeAKgf6GWIgaqqiLhA==}
@@ -6860,8 +6878,8 @@ packages:
   /flatted@3.2.7:
     resolution: {integrity: sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==}
 
-  /follow-redirects@1.15.2:
-    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
+  /follow-redirects@1.15.4:
+    resolution: {integrity: sha512-Cr4D/5wlrb0z9dgERpUL3LrmPKVDsETIJhaCMeDfuFYcqa5bldGV6wBsAN6X/vxlXQtFBMrXdXxdL8CbDTGniw==}
     engines: {node: '>=4.0'}
     peerDependencies:
       debug: '*'
@@ -7445,7 +7463,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.15.2
+      follow-redirects: 1.15.4
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
